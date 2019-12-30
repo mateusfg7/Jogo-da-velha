@@ -1,23 +1,11 @@
 from functions.rules import winCondition
+from functions.rules import winCases
 from functions.render import render
+from functions.colors import cor
 
-cor = {
-    'red' : '\033[00;31m',
-    'white' : '\033[00;37m'
-}
+casosDeVitorias = winCases()
 
-casosDeVitorias = [
-    ['1', '2', '3'],
-    ['4', '5', '6'],
-    ['7', '8', '9'],
-    ['1', '4', '7'],
-    ['2', '5', '8'],
-    ['3', '6', '9'],
-    ['1', '5', '9'],
-    ['3', '5', '7'],
-]
-
-casas = {
+position = {
     '1' : '\033[00;37m1',
     '2' : '\033[00;37m2',
     '3' : '\033[00;37m3',
@@ -29,22 +17,19 @@ casas = {
     '9' : '\033[00;37m9',
 }
 
-state = []
-
-player = 'X'
+currenctPlayer = 'X'
 
 while True:
-    render(player, casas)
+    render(currenctPlayer, position)
     
     for c in casosDeVitorias:
-        winCondition(c[0], c[1], c[2], casas, 'X', 'O')
+        winCondition(c[0], c[1], c[2], position, 'X', 'O')
 
-    mark = input("\n-> ")
-    casas[mark] = player
-    state.append(mark)
+    choice = input("\n-> ")
+    position[choice] = currenctPlayer
 
-    if player == 'X':
-        player = 'O'
-    elif player == 'O':
-        player = 'X'
+    if currenctPlayer == 'X':
+        currenctPlayer = 'O'
+    elif currenctPlayer == 'O':
+        currenctPlayer = 'X'
     
