@@ -1,2 +1,2 @@
 # Jogo-da-velha
-Jogo da velha com IA
+Jogo da velha
