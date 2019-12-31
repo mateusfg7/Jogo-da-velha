@@ -24,6 +24,7 @@ while True:
     
     for c in casosDeVitorias:
         winCondition(c[0], c[1], c[2], position, 'X', 'O')
+    drawCondition(position)
 
     if currenctPlayer == 'X':
         choice = input("\n-> ")

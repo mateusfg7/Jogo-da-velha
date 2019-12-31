@@ -15,6 +15,8 @@ position = {
     '9' : '\033[00;37m9',
 }
 
+drawCondition(position)
+
 currenctPlayer = 'X'
 
 while True:
@@ -22,6 +24,7 @@ while True:
     
     for c in casosDeVitorias:
         winCondition(c[0], c[1], c[2], position, 'X', 'O')
+    drawCondition(position)
 
     choice = input("\n-> ")
 

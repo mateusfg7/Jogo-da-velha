@@ -1,6 +1,19 @@
 from functions.colors import cor
 cor = cor()
 
+def drawCondition(positions):
+    markedPositions = 0
+    index = 1
+    while index <= len(positions):
+        if positions[str(index)] == 'X' or positions[str(index)] == 'O':
+            markedPositions += 1
+        index += 1
+    if markedPositions == 9:
+        print(f"{cor['white']}O jogo deu {cor['red']}empate{cor['white']}!")
+        exit()
+    else:
+        return False
+
 def winCondition(one, two, three, position, player1, player2):
     if position[one] == player1 and position[two] == player1 and position[three] == player1:
         print(f"\n{cor['white']}Parabens {cor['red']}{player1} {cor['white']}você ganhou!")
