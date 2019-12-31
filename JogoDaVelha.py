@@ -1,7 +1,5 @@
-from functions.rules import winCondition
-from functions.rules import winCases
+from functions.rules import *
 from functions.render import render
-from functions.colors import cor
 
 casosDeVitorias = winCases()
 
@@ -26,10 +24,15 @@ while True:
         winCondition(c[0], c[1], c[2], position, 'X', 'O')
 
     choice = input("\n-> ")
-    position[choice] = currenctPlayer
 
-    if currenctPlayer == 'X':
-        currenctPlayer = 'O'
-    elif currenctPlayer == 'O':
-        currenctPlayer = 'X'
+    if validateChoice(currenctPlayer, choice, position) == True:
+        
+        position[choice] = currenctPlayer
+        
+        if currenctPlayer == 'X':
+            currenctPlayer = 'O'
+        elif currenctPlayer == 'O':
+            currenctPlayer = 'X'
+
+    
     
