@@ -28,7 +28,7 @@ while True:
 
     choice = input("\n-> ")
 
-    if validateChoice(currenctPlayer, choice, position) == True:
+    if validateChoice(currenctPlayer, choice, position):
         
         position[choice] = currenctPlayer
         
