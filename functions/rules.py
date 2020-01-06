@@ -39,5 +39,4 @@ def winCases():
 def validateChoice(player, choice, position):
     if position[choice] == 'X' or position[choice] == 'O':
         return False
-    else:
-        return True
+    return True
