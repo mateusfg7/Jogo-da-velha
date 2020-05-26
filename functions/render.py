@@ -1,16 +1,17 @@
 import os
 
-from functions.colors import cor
-cor = cor()
 
 def render(player, casas):
-    
-    os.system('clear')
-    
-    print(f"{cor['white']}Player Atual: {cor['red']}{player}{cor['white']}\n")
 
-    print(f"{cor['red']}{casas['1']} {cor['white']}| {cor['red']}{casas['2']} {cor['white']}| {cor['red']}{casas['3']}")
-    print(f"{cor['white']}---------")
-    print(f"{cor['red']}{casas['4']} {cor['white']}| {cor['red']}{casas['5']} {cor['white']}| {cor['red']}{casas['6']}")
-    print(f"{cor['white']}---------")
-    print(f"{cor['red']}{casas['7']} {cor['white']}| {cor['red']}{casas['8']} {cor['white']}| {cor['red']}{casas['9']}")
+    os.system('clear')
+
+    print(f"\033[00;37mPlayer Atual: \033[00;31m{player}\033[00;37m\n")
+
+    print(
+        f"\033[00;31m{casas['1']} \033[00;37m| \033[00;31m{casas['2']} \033[00;37m| \033[00;31m{casas['3']}")
+    print(f"\033[00;37m---------")
+    print(
+        f"\033[00;31m{casas['4']} \033[00;37m| \033[00;31m{casas['5']} \033[00;37m| \033[00;31m{casas['6']}")
+    print(f"\033[00;37m---------")
+    print(
+        f"\033[00;31m{casas['7']} \033[00;37m| \033[00;31m{casas['8']} \033[00;37m| \033[00;31m{casas['9']}")
