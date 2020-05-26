@@ -26,8 +26,8 @@ currenctPlayer = 'X'
 while True:
     render(currenctPlayer, position)
 
-    for c in winCases:
-        winCondition(c[0], c[1], c[2], position, 'X', 'O')
+    for case in winCases:
+        winCondition(case[0], case[1], case[2], position, 'X', 'O')
     drawCondition(position)
 
     choice = input("\n-> ")
