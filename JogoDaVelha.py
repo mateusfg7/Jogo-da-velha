@@ -5,7 +5,7 @@ from functions.rules import winCondition
 
 from functions.render import render
 
-casosDeVitorias = winCases()
+winCases = winCases()
 
 position = {
     '1': '\033[00;37m1',
@@ -26,7 +26,7 @@ currenctPlayer = 'X'
 while True:
     render(currenctPlayer, position)
 
-    for c in casosDeVitorias:
+    for c in winCases:
         winCondition(c[0], c[1], c[2], position, 'X', 'O')
     drawCondition(position)
 
